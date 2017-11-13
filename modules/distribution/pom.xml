@@ -286,6 +286,12 @@
             <artifactId>org.wso2.carbon.analytics-common.dataprovider.feature</artifactId>
             <type>zip</type>
         </dependency>
+        <!--Database query config manager-->
+        <dependency>
+            <groupId>org.wso2.carbon.analytics-common</groupId>
+            <artifactId>org.wso2.carbon.database.query.manager.feature</artifactId>
+            <type>zip</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -790,6 +796,11 @@
                                 <!-- Data Provider -->
                                 <feature>
                                     <id>org.wso2.carbon.analytics-common.dataprovider.feature</id>
+                                    <version>${carbon.analytics-common.version}</version>
+                                </feature>
+                                <!-- Database Query Config manager feature -->
+                                <feature>
+                                    <id>org.wso2.carbon.database.query.manager.feature</id>
                                     <version>${carbon.analytics-common.version}</version>
                                 </feature>
                             </features>
@@ -1467,6 +1478,11 @@
                                 <!-- Data Provider feature -->
                                 <feature>
                                     <id>org.wso2.carbon.analytics-common.dataprovider.feature</id>
+                                    <version>${carbon.analytics-common.version}</version>
+                                </feature>
+                                <!-- Database Query Config manager feature -->
+                                <feature>
+                                    <id>org.wso2.carbon.database.query.manager.feature</id>
                                     <version>${carbon.analytics-common.version}</version>
                                 </feature>
                             </features>
