@@ -1180,6 +1180,11 @@
                 <version>${analytics.solutions.version}</version>
                 <type>zip</type>
             </dependency>
+            <dependency>
+                <groupId>org.wso2.sp</groupId>
+                <artifactId>wso2sp</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
