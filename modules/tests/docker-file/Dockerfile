@@ -59,17 +59,8 @@ RUN groupadd --system -g ${USER_GROUP_ID} ${USER_GROUP} && \
 # copy the wso2 product distribution to user's home directory
 COPY --chown=wso2carbon:wso2 ${FILES}/${WSO2_SERVER_PACK}/ ${WSO2_SERVER_HOME}/
 
-# copy the Kafka client jars to the product home
-COPY --chown=wso2carbon:wso2 ${CON_FILES}/kafka_*.jar ${WSO2_SERVER_HOME}/lib/
-COPY --chown=wso2carbon:wso2 ${CON_FILES}/kafka_clients_*.jar ${WSO2_SERVER_HOME}/lib/
-COPY --chown=wso2carbon:wso2 ${CON_FILES}/metrics_core_*.jar ${WSO2_SERVER_HOME}/lib/
-COPY --chown=wso2carbon:wso2 ${CON_FILES}/scala_library_*.jar ${WSO2_SERVER_HOME}/lib/
-COPY --chown=wso2carbon:wso2 ${CON_FILES}/scala_parser_combinators_*.jar ${WSO2_SERVER_HOME}/lib/
-COPY --chown=wso2carbon:wso2 ${CON_FILES}/zkclient_*.jar ${WSO2_SERVER_HOME}/lib/
-COPY --chown=wso2carbon:wso2 ${CON_FILES}/zookeeper_*.jar ${WSO2_SERVER_HOME}/lib/
-
-# copy mysql connector jar to the server as a third party library
-COPY --chown=wso2carbon:wso2 ${CON_FILES}/mysql-connector-java-*-bin.jar ${WSO2_SERVER_HOME}/lib/
+# copy the Connector jars to the product home
+COPY --chown=wso2carbon:wso2 ${CON_FILES}/* ${WSO2_SERVER_HOME}/lib/
 
 # copy mysql connector jar to the server as a third party library
 COPY --chown=wso2carbon:wso2 ${SIDDHI_FILES}/* ${WSO2_SERVER_HOME}/wso2/worker/deployment/siddhi-files/
