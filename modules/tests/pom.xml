@@ -123,7 +123,7 @@
                             <name>wso2sp:4.4.0-m17-snapshot</name>
                             <build>
                                 <ports>
-                                    <port>9443</port>
+                                    <port>+bind.host.name:9443:9443</port>
                                 </ports>
                                 <dockerFileDir>${project.basedir}/docker-file</dockerFileDir>
                             </build>
